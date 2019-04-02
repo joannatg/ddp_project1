@@ -1,0 +1,33 @@
+---
+title: "Test Document"
+output: 
+  html_document:
+    self_contained: no
+---
+
+Create a web page using R Markdown that features a map created with Leaflet.
+
+Your webpage must contain the date that you created the document, and it must contain a map created with Leaflet. We would love to see you show off your creativity!
+
+The rubric contains the following two questions:
+
+Does the web page feature a date and is this date less than two months before the date that you're grading this assignment?
+Does the web page feature an interactive map that appears to have been created with Leaflet?
+
+```{r}
+#library(htmltools)
+library(leaflet)
+
+#my_title <- tags$p(tags$style("p {color: red; font-size:22px}"),
+  #                 tags$b("Map created 2019-04-02"))
+
+
+content <- paste(sep = "<br/>",
+                 "<b><a href='https://azstateparks.com/red-rock/explore/maps'>Red Rock State Park, AZ</a></b>"
+)
+locationOnMap  <- leaflet() %>% addTiles() %>% 
+  addPopups(-111.8306,  34.8129,  content, options = popupOptions(closeButton = FALSE)
+  )
+locationOnMap 
+```
+Map created on 2019-04-02
