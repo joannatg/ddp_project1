@@ -1,5 +1,5 @@
 ---
-title: "Test Document"
+title: "Developing data products - project 1"
 output: 
   html_document:
     self_contained: no
